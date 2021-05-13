@@ -58,9 +58,8 @@ komendy \textit{sudo apt update}
 
 \begin{figure}[H]
     \centering
-    \hspace*{-1cm}
-    \includegraphics[totalheight=10cm]{zlozonosc.jpg}
-    \caption{Złożoność obliczeniowa dla metody enqueue}
+    \includegraphics[totalheight=3cm]{data/sudoUpdate.png}
+    \caption{Zaktualizowanie pakietów }
     \label{2}
 \end{figure}
 
@@ -69,57 +68,90 @@ tekstu przy użyciu komendy \textit{sudo apt install vim}
 
 \begin{figure}[H]
     \centering
-    \hspace*{-1cm}
-    \includegraphics[totalheight=10cm]{zlozonosc.jpg}
-    \caption{Złożoność obliczeniowa dla metody enqueue}
+    
+    \includegraphics[totalheight=3cm]{data/installVim.png}
+    \caption{Instalacja vima}
     \label{2}
 \end{figure}
 
 
-\section{dodac uzytkownika}
+\section{Dodawanie użytkownika}
+Naszego użytkownika możemy dodać przy pomocy komendy 
+\textit{sudo adduser \textbf{nazwa użytkownika}}, w naszym przypadku będzie to 
+użytkownik \textbf{Adam}.
 
 \begin{figure}[H]
     \centering
-    \hspace*{-1cm}
-    \includegraphics[totalheight=10cm]{zlozonosc.jpg}
-    \caption{Złożoność obliczeniowa dla metody enqueue}
+    \includegraphics[totalheight=2cm]{data/userAdd.png}
+    \caption{Instalacja vima}
+    \label{2}
+\end{figure}
+Musimy tutaj następnie podać hasło użytkownika oraz potwierdzić je.
+Takie konto jest widoczne w  \textbackslash etc\textbackslash Users 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[totalheight=7cm]{data/Users.png}
+    \caption{Lista użytkowników}
     \label{2}
 \end{figure}
 
 
-\section{Utworzenie nowej grupy - "studenci"}
+\section{Utworzenie nowej grupy}
+W celu utworzenia nowej grupy musimy skorzystać z polecenia \textit{group add \textbf{nazwa grupy}}
 
 \begin{figure}[H]
     \centering
     \hspace*{-1cm}
-    \includegraphics[totalheight=10cm]{zlozonosc.jpg}
+   % \includegraphics[totalheight=10cm]{zlozonosc.jpg}
     \caption{Złożoność obliczeniowa dla metody enqueue}
     \label{2}
 \end{figure}
 
 
 \section{Komenda ls -la}
+Przy pomocy komendy \textit{ls} jesteśmy w stanie wyświetlić w wyświetlić
+cały nasz katalog z zawierającymi go plikami, natomiast dodatkowego
+argumenty \textit{-la} powodują wyświetlenie również domyślnie ukrytych
+plików oraz wyświetlenie dodatkowych informacji jak na przykład: 
+\begin{itemize}
+    \item prawa dostępu
+    \item data modyfikacji
+    \item rozmiar pliku
+\end{itemize}
+
 
 \begin{figure}[H]
     \centering
     \hspace*{-1cm}
-    \includegraphics[totalheight=10cm]{zlozonosc.jpg}
-    \caption{Złożoność obliczeniowa dla metody enqueue}
+    \includegraphics[totalheight=4cm]{data/ls-la.png}
+    \caption{Komenda "ls -la"}
     \label{2}
 \end{figure}
 
 
-\section{Zmienianie uprawnienień użytkowników "chmod" }
 
-\begin{figure}[H]
-    \centering
-    \hspace*{-1cm}
-    \includegraphics[totalheight=10cm]{zlozonosc.jpg}
-    \caption{Złożoność obliczeniowa dla metody enqueue}
-    \label{2}
-\end{figure}
+\section{Polecenie \emph{\textbf{chmod}}}
+Każdy plik oraz folder ma przypisane określone prawa dostępu dla różnych użytkowników systemu.\par
+Polecenie \emph{\textbf{chmod}} zmienia parametry zezwolenia dostępu do plików w systemie Ubuntu.
+Parametry polecenia chmod:
+\emph{\textbf{chmod [opcje] uprawnienia plik}}\\
 
+Uprawnienia jakie można nadać plikom:
+\begin{itemize}
+    \item \emph{\textbf{r}} - odczyt
+    \item \emph{\textbf{w}} - zapis
+    \item \emph{\textbf{x}} - wykonanie
+\end{itemize}
 
+Opis "klas" użytkowników, którym można zmienić uprawnienia:
+\begin{itemize}
+    \item  \emph{\textbf{user}} - właściciel
+    \item  \emph{\textbf{group}} - grupa
+    \item  \emph{\textbf{inni}} - użytkownicy spoza grupy
+    \item  \emph{\textbf{a}} - wszyscy użytkownicy
+\end{itemize}
+\subsection{Przykład na grupach}
 
 
 \end{document}
