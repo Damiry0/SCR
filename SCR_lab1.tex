@@ -32,7 +32,7 @@
 
 \tableofcontents
 \section{Wstęp}
-\hspace*{0.5cm}Grupa lab: E12-93c	//TODO
+\hspace*{0.5cm}Grupa lab: E12-93c
 
 Termin zajęć: CZW 15:15-16:55
 
@@ -91,20 +91,28 @@ Takie konto jest widoczne w  \textbackslash etc\textbackslash Users
 
 \begin{figure}[H]
     \centering
-    \includegraphics[totalheight=7cm]{data/Users.png}
+    \includegraphics[totalheight=7cm]{data/AdamAddD.png}
     \caption{Lista użytkowników}
     \label{2}
 \end{figure}
 
 
-\section{Utworzenie nowej grupy}
+\section{Utworzenie nowej grupy i dodawanie użytkownika do grupy}
 W celu utworzenia nowej grupy musimy skorzystać z polecenia \textit{group add \textbf{nazwa grupy}}
+Tworzymy zatem grupe \textbf{studenci}
+\begin{figure}[H]
+    \centering
+   \includegraphics[totalheight=1cm]{data/addStudenci.png}
+    \caption{Dodanie grupy studenci}
+    \label{2}
+\end{figure}
+Następnie przy pomocy Vim wyświetlamy \textbackslash etc\textbackslash Grups i 
+dodajemy ręcznie naszych użytkowników do grupy czego wynikiem jest:
 
 \begin{figure}[H]
     \centering
-    \hspace*{-1cm}
-   % \includegraphics[totalheight=10cm]{zlozonosc.jpg}
-    \caption{Złożoność obliczeniowa dla metody enqueue}
+   \includegraphics[totalheight=8cm]{data/gruupsWith.png}
+    \caption{Użytkownicy w grupach}
     \label{2}
 \end{figure}
 
@@ -131,7 +139,7 @@ plików oraz wyświetlenie dodatkowych informacji jak na przykład:
 
 
 
-\section{Polecenie \emph{\textbf{chmod}}}
+\section{Polecenie \emph{\textit{chmod}}}
 Każdy plik oraz folder ma przypisane określone prawa dostępu dla różnych użytkowników systemu.\par
 Polecenie \emph{\textbf{chmod}} zmienia parametry zezwolenia dostępu do plików w systemie Ubuntu.
 Parametry polecenia chmod:
@@ -148,10 +156,38 @@ Opis "klas" użytkowników, którym można zmienić uprawnienia:
 \begin{itemize}
     \item  \emph{\textbf{user}} - właściciel
     \item  \emph{\textbf{group}} - grupa
-    \item  \emph{\textbf{inni}} - użytkownicy spoza grupy
     \item  \emph{\textbf{a}} - wszyscy użytkownicy
 \end{itemize}
 \subsection{Przykład na grupach}
+Tworzę nowy folder testowy przy pomocy komendy \textit{mkdir} o nazwie
+\textbf{test} i zmieniam jego uprawnienia na chmod 700, tzn że tylko 
+główny użytkownik z permisjami będzie miał do niego dostęp. Do folderu nie da
+się dostać czy zmodyfikować nazwy.
+\begin{figure}[H]
+    \centering
+    \includegraphics[totalheight=3cm]{data/chmod.png}
+    \caption{Brak uprawnień }
+    \label{2}
+\end{figure}
+Po nadaniu uprawnien dla użytkownika \textbf{damian} jesteśmy w stanie dokonywać zmian an pliku
+\begin{figure}[H]
+    \centering
+    \includegraphics[totalheight=3cm]{data/chmod1.png}
+    \caption{Nadane uprawnienia }
+    \label{2}
+\end{figure}
+W kolejnym przykładzie chce pokazać ten wpływ również na grupy, po zmianie
+konta użytkownika nie posiadam uprawnień, więc zmieniam uprawnienia nadaniu
+\textit{chmod 770} oraz dodaje grupe \textbf{studenci} do tego folderu przy pomocy
+\textit{chgrp studenci test}. Przelogowuje się na inne konto użytkownika i mogę zauważyć, że
+posiadam wszelkie uprawnienia.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[totalheight=3cm]{data/chmod3.png}
+    \caption{Nadane uprawnienia dla grupy studenci}
+    \label{2}
+\end{figure}
 
 
 \end{document}
